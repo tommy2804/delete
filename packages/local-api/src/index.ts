@@ -11,7 +11,7 @@ export const serve = (port: number, filename: string, dir: string, useProxy: boo
   if (useProxy) {
     app.use(
       createProxyMiddleware({
-        target: 'http://127.0.0.1:3006',
+        target: 'http://127.0.0.1:3000',
         ws: true,
         logLevel: 'silent',
       })

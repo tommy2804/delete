@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.serverCommand = void 0;
 const path_1 = __importDefault(require("path"));
 const commander_1 = require("commander");
-const local_api_1 = require("local-api");
+const loc_api_1 = require("@gotypejs/loc.api");
 const isProduction = process.env.NODE_ENV === 'production';
 exports.serverCommand = new commander_1.Command()
     .command('serve [filename]')
@@ -24,7 +24,7 @@ exports.serverCommand = new commander_1.Command()
     .action((filename = 'notebook.js', options) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const dir = path_1.default.join(process.cwd(), path_1.default.dirname(filename));
-        yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir, !isProduction);
+        yield (0, loc_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir, !isProduction);
         console.log(`opened ${filename}. Navigate to http://localhost:${options.port} to edit the file.`);
     }
     catch (err) {

@@ -1,6 +1,6 @@
 {
   "name": "gotypejs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@gotypejs/loc.cli": "^1.1.0"
+    "@gotypejs/loc.cli": "^1.1.1"
   },
   "devDependencies": {
-    "@gotypejs/loc.api": "^1.1.0",
+    "@gotypejs/loc.api": "^1.1.1",
     "@types/node": "^18.11.18",
     "commander": "^10.0.0",
     "esbuild": "0.8.26",

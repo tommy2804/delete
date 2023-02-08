@@ -13,7 +13,7 @@ const serve = (port, filename, dir, useProxy) => {
     app.use((0, cells_1.createCellsRouter)(filename, dir));
     if (useProxy) {
         app.use((0, http_proxy_middleware_1.createProxyMiddleware)({
-            target: 'http://127.0.0.1:3006',
+            target: 'http://127.0.0.1:3000',
             ws: true,
             logLevel: 'silent',
         }));

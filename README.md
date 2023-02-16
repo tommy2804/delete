@@ -1,19 +1,23 @@
-# goType - its my personal project.. soon will be available to download on npm. 
-the project i built from nothing till pruduction, using typescript, react, lerna package manager, esBuild and more.
-hope you'de like it.
+This is an interactive coding environment. You can write Javascript, import any NPM modules and see it executed, and write comprehensive documentation using markdown.
 
-goType is a platform that enables users to use the cli and write a simple command that automaticly will open in the local browser, 
-at a given port that you'll choose. 
-and inside the platform you are able to write jsx code that you'll see the result immidietly at a frame neer the text editor.
-you can take notes about you're progress and save everything in youre local machine...
+Click any text cell (including this one) to edit it
 
+The code in each code editor is all joined together into one file. If you define a variable in cell#1, you can refer it to any following cells!
 
-this platform is similar to codeSandbox only it's bundle by esBuild, a much faster bundler tool to bundle code from many languages to js that compiles to 
-your browser.. you are able to download at the text editor any package that published on npm and only import it direcly from the browser.
-like all the packages of npm are allready in your computer once you use this platform and that can save you a lot of time because you dont need to think
-a lot about which package to download that would make trouble in your app.. simply import it immidietly in goType,
-try it and decide weather or not to use it in you next project.
+You can show any React component, string, number or anything else by calling show function. This is a function built into this environment. Call show multiple times to show multiple values.
 
+Re-order or delete cells using the buttons on the top right
 
-Tommy Rozenberg, a Wev Developer. 
+Add new cells by hovering on the divider between cells
 
+All of your changes get saved to the file you opened gotypejs with. So if your run npx gotypejs-by-jl serve test.js, all of the text and code you write will be saved to the test.js that located in the same directory where you run command.
+
+Install
+npm install [-g] gotypejs-by-jl@latest
+
+Usage
+gotypejs serve [filename/path-to-file] [--port=<number>]
+
+Examples: gotypejs serve test.js --port=3000 gotypejs -p 3000 test.js
+
+Default filename is notebook.js, default port is 4005

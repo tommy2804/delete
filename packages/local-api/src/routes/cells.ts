@@ -29,6 +29,7 @@ export const createCellsRouter = (filename: string, dir: string) => {
       };
       if (isLocalApiError(err)) {
         if (err.code === 'ENOENT') {
+          // await fs.mkdir('gotypejs', { recursive: true });
           // add code to create a file if it doesn't exist
           await fs.writeFile(fullPath, '[]', 'utf-8');
           res.send([]);
